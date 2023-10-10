@@ -5,7 +5,6 @@ const saveBtn = document.getElementById("save");
 const loadBtn = document.getElementById("load");
 const h1 = document.getElementById("myH1");
 const myKey = "myKey";
-const timerKey = "timerKey";
 const save = () => {
   localStorage.setItem(myKey, input.value);
   h1.innerText = `Hello, ${input.value}`;
@@ -21,6 +20,7 @@ loadBtn.addEventListener("click", load);
 
 //------------------------ ESERCIZIO 2 ------------------------//
 const timeSpan = document.getElementById("timer");
+const timerKey = "timerKey";
 const savedTime = sessionStorage.getItem(timerKey);
 let timerValue = savedTime;
 timeSpan.innerText = timerValue;
